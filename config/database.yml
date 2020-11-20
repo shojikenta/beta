@@ -5,18 +5,9 @@ default: &default
   username: root
   password:
   host: localhost
+  socket: /var/lib/mysql/mysql.sock
 
 
 development:
   <<: *default
   database: beta_development
-
-test:
-  <<: *default
-  database: beta_test
-
-production:
-  <<: *default
-  database: beta_production
-  username: sample_app
-  password: <%= ENV['SAMPLE_DATABASE_PASSWORD'] %>
