@@ -12,7 +12,7 @@ gem 'bootsnap'
 gem 'therubyracer'
 
 group :development, :test do
-  gem 'mysql2', '~> 0.4.4'
+  gem 'mysql2'
   gem 'byebug',  '9.0.6', platform: :mri
 end
 
@@ -32,7 +32,7 @@ group :test do
 end
 
 group :production do
-  gem 'mysql2', '~> 0.4.4'
+  gem 'mysql2'
 end
 
 # Windows環境ではtzinfo-dataというgemを含める必要があります
