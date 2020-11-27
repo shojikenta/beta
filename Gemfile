@@ -16,6 +16,8 @@ group :development, :test do
   gem 'byebug',  '9.0.6', platform: :mri
   gem 'rspec-rails', '~> 4.0.1'
   gem 'spring-commands-rspec'
+  gem "factory_bot_rails"
+  gem 'faker'
 end
 
 group :development do
@@ -23,6 +25,11 @@ group :development do
   gem 'listen',                '3.1.5'
   gem 'spring',                '2.0.2'
   gem 'spring-watcher-listen', '2.0.1'
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec'
+  gem 'overcommit'
 end
 
 group :test do
