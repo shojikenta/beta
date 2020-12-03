@@ -16,7 +16,7 @@ RSpec.describe 'Access to static_pages', type: :request do
     it 'responds successfully' do
       expect(response).to have_http_status 200
     end
-    it "has title 'Home | Beta App'" do
+    it "has title 'Help | Beta App'" do
       expect(response.body).to include 'Help | Beta App'
     end
   end
@@ -25,8 +25,17 @@ RSpec.describe 'Access to static_pages', type: :request do
     it 'responds successfully' do
       expect(response).to have_http_status 200
     end
-    it "has title 'Home | Beta App'" do
+    it "has title 'About | Beta App'" do
       expect(response.body).to include 'About | Beta App'
+    end
+  end
+  context 'GET #contact' do
+    before { get contact_path } 
+    it 'responds successfully' do
+      expect(response).to have_http_status 200
+    end
+    it "has title 'Contact | Beta App'" do
+      expect(response.body).to include 'Contact | Beta App'
     end
   end
 end
