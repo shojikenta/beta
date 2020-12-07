@@ -18,6 +18,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0.1'
   gem 'spring-commands-rspec'
   gem "factory_bot_rails"
+  gem 'shoulda-matchers'
   gem 'faker'
 end
 
