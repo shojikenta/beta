@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-  include SessionsHelper
   
   def new
   end
@@ -13,5 +12,11 @@ class SessionsController < ApplicationController
       flash.now[:danger] = "メールアドレスか、パスワードが間違ってます😢"
       render 'new'
     end
+  end
+
+  def destroy
+    log_out
+    redirect_to root_url
+    flash[:success] = "ログアウトしました💨"
   end
 end
