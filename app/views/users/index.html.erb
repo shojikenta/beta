@@ -1,0 +1,25 @@
+<% provide(:title, '全てのユーザー') %>
+<h1>ユーザー一覧</h1>
+
+<%= paginate @users %>
+
+<div class="jscroll">
+  <ul class="users">
+    <%= render @users %>
+  </ul>
+</div>
+
+<%= paginate @users %>
+
+<script>
+  $(document).on('turbolinks:load', function() {
+    $('.jscroll').jscroll({
+      // 無限に追加する要素は、どこに入れる？
+      contentSelector: '.jscroll', 
+      // 次のページにいくためのリンクの場所は？ ＞aタグの指定
+      nextSelector: 'a.next',
+      // 読み込み中の表示はどうする？
+      loadingHtml: '読み込み中'
+    });
+  });
+</script>
